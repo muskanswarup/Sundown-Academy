@@ -3,6 +3,18 @@
     src: url(./NeueHaasDisplayMediu.ttf)
 }
 
+@font-face{
+    font-family: neu;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+
+@font-face{
+    font-family: neu;
+    font-weight: 200;
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+
 *{
     margin:0;
     padding: 0;
@@ -183,5 +195,121 @@ nav{
 #page2{
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(235, 195, 195);
+    background-color: #EFEAE3;
+    /* background-color: rgb(235, 195, 195); */
+    padding: 8vw 0;
+    position: relative;
+}
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#moving-text h1{
+    font-size: 8vw;
+    /* background-color: aqua; */
+    display: inline-block;
+}
+
+#circle{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FE330A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }   
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    width: 100%;
+    height: 80vh;
+    padding: 4.5vw;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 99;
+}
+
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+}
+
+#bottom-part2{
+    width: 20%;
+    font-weight: 100;
+    /* background-color: limegreen; */
+}
+
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+#bottom-part2 p{
+    font-weight: 200;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+#page2 #circular-ball{
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(to top right, #FE330A , #f06418);
+    position: absolute;
+    border-radius: 50%;
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+
+    animation-name: movingBall;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+#page3{
+    width: 100%;
+    height: 100vh;
+    background-color: #EFEAE3;
+}
+
+@keyframes movingBall {
+    from{
+        transform: translate(10% , -10%);
+    }
+
+    to{
+        transform: translate(-10%, 10%);
+    }
 }
