@@ -275,7 +275,6 @@ nav h3 {
 #bottom-part2 {
   width: 20%;
   font-weight: 100;
-  /* background-color: limegreen; */
 }
 
 #bottom-part2 img {
@@ -298,7 +297,6 @@ nav h3 {
   top: 58%;
   left: 25%;
   filter: blur(20px);
-
   animation-name: movingBall;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -307,9 +305,7 @@ nav h3 {
 }
 
 #bottom-heading-2{
-  /* width: 100%; */
   display: inline-flex;
-  /* border: 1px solid black; */
   margin-left: 30px;
   padding: 10px 12px;
   align-items: center;
@@ -318,9 +314,6 @@ nav h3 {
   bottom: 0;
   left: 6%;
   transform: translateX(-50%);
-  /* bottom: 4px; */
-
-  /* bottom: 10px; */
 }
 
 #bottom-heading-2 h4{
@@ -343,58 +336,23 @@ nav h3 {
   padding: 4vw 0;
 }
 
-/* #page3-button {
-  margin: 40px;
-  border: 1px solid rgba(171, 163, 163, 0.853);
-  padding: 10px 20px;
-  font-size: 20px;
-  display: inline-flex;
-  border-radius: 50px;
-  align-items: center;
-  transition: all ease 0.4s;
-  position: relative;
-  overflow: hidden;
-  font-weight: 500;
-  color: #585050df;
-}
-
-#page3-button h4::after{
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: black;
+#right-container{
   position: absolute;
-  left: 0;
-  bottom: -100%;
-  border-radius: 50%;
-  transition: all ease 0.4s;
+  right: 10px;
+  padding: 10px 12px;
+  text-align: right;
+  transform: translateX(-50%);
 }
 
-#page3-button h4:hover::after{
-  bottom:0;
-  border-radius: 0;
+#right-container h3{
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-bottom: 5px;
 }
 
-#page3-button h4 a{
-  text-decoration: none;
-  color: #000000bb;
-  position: relative;
-  z-index: 9;
+#right-container p{
+  color: #00000066;
 }
-
-#page3-button h4:hover a{
-  color: white;
-}
-
-#page3-button h4:hover #right-arrow path{
-  fill: pink;
-} 
-
-#right-arrow{
-  margin-left: 10px;
-}
-
-*/
 
 #page3-button {
   margin: 40px;
@@ -421,7 +379,7 @@ nav h3 {
   bottom: -100%;
   border-radius: 50%;
   transition: all ease 0.4s;
-  z-index: 1; /* Ensure this is behind the text */
+  z-index: 1; 
 }
 
 #page3-button:hover::after {
@@ -433,8 +391,8 @@ nav h3 {
   text-decoration: none;
   color: #000000bb;
   position: relative;
-  z-index: 2; /* Ensure this is above the background */
-  transition: color ease 0.4s; /* Add transition for smooth color change */
+  z-index: 2; 
+  transition: color ease 0.4s; 
 }
 
 #page3-button:hover h4 a {
@@ -443,13 +401,13 @@ nav h3 {
 
 #right-arrow {
   margin-left: 10px;
-  transition: fill ease 0.4s; /* Add transition for smooth color change */
+  transition: fill ease 0.4s; 
 }
 
 #page3-button:hover #right-arrow path {
   fill: white;
 }
-/*  */
+
 
 @keyframes movingBall {
   from {
