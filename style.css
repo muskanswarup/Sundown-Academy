@@ -306,6 +306,36 @@ nav h3 {
   animation-timing-function: linear;
 }
 
+#bottom-heading-2{
+  /* width: 100%; */
+  display: inline-flex;
+  /* border: 1px solid black; */
+  margin-left: 30px;
+  padding: 10px 12px;
+  align-items: center;
+  gap: 0.5vw;
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  transform: translateX(-50%);
+  /* bottom: 4px; */
+
+  /* bottom: 10px; */
+}
+
+#bottom-heading-2 h4{
+  font-size: 20px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+#list-type-2{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #df2e0a;
+} 
+
 #page3 {
   width: 100%;
   min-height: 100vh;
