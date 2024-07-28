@@ -10,6 +10,7 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -53,7 +54,11 @@
                 <div id="hero-3"></div>
             </div>
             
-            <video autoplay mute loop src="./video.mp4"></video>
+            <!-- <video autoplay mute loop src="./video.mp4"></video> -->
+            <video autoplay muted loop>
+                <source src="./video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
         <div id="page2">
@@ -140,7 +145,14 @@
                     <h2>Play New Kidvision</h2>
                 </div>
             </div>
+            
 
+            <div id="page3-button">
+                <h4><a href="#">All Projects</a></h4>
+                <svg width="24" id="right-arrow" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                  <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                </svg>
+              </div>               
         </div>
 
         <div id="page4"></div>
@@ -197,7 +209,7 @@
             <div id="full-div2"></div>
     </div>
 
-    <div id="footer">
+    <!-- <div id="footer">
 
         <div id="footer-div">
             <div id="footer-left">
@@ -219,7 +231,7 @@
             <h5>Instagram</h5>
             <h5>LinkedIn</h5>
        </div>
-    </div>
+    </div> -->
     
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

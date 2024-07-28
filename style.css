@@ -64,7 +64,7 @@ nav h3 {
   gap: 1vw;
 }
 
-#nav-part2 h4 {
+#nav-part2 h4{
   padding: 10px 20px;
   border: 1px solid rgb(183, 177, 177);
   border-radius: 50px;
@@ -88,7 +88,7 @@ nav h3 {
   transition: all ease 0.4s;
 }
 
-#nav-part2 h4:hover::after {
+#nav-part2 h4:hover::after  {
   bottom: 0;
   border-radius: 0;
 }
@@ -100,7 +100,7 @@ nav h3 {
   z-index: 9;
 }
 
-#nav-part2 h4:hover a {
+#nav-part2 h4:hover a{
   color: white;
 }
 
@@ -313,6 +313,114 @@ nav h3 {
   padding: 4vw 0;
 }
 
+/* #page3-button {
+  margin: 40px;
+  border: 1px solid rgba(171, 163, 163, 0.853);
+  padding: 10px 20px;
+  font-size: 20px;
+  display: inline-flex;
+  border-radius: 50px;
+  align-items: center;
+  transition: all ease 0.4s;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  color: #585050df;
+}
+
+#page3-button h4::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+
+#page3-button h4:hover::after{
+  bottom:0;
+  border-radius: 0;
+}
+
+#page3-button h4 a{
+  text-decoration: none;
+  color: #000000bb;
+  position: relative;
+  z-index: 9;
+}
+
+#page3-button h4:hover a{
+  color: white;
+}
+
+#page3-button h4:hover #right-arrow path{
+  fill: pink;
+} 
+
+#right-arrow{
+  margin-left: 10px;
+}
+
+*/
+
+#page3-button {
+  margin: 40px;
+  border: 1px solid rgba(171, 163, 163, 0.853);
+  padding: 10px 20px;
+  font-size: 20px;
+  display: inline-flex;
+  border-radius: 50px;
+  align-items: center;
+  transition: all ease 0.4s;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  color: #585050df;
+}
+
+#page3-button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+  z-index: 1; /* Ensure this is behind the text */
+}
+
+#page3-button:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#page3-button h4 a {
+  text-decoration: none;
+  color: #000000bb;
+  position: relative;
+  z-index: 2; /* Ensure this is above the background */
+  transition: color ease 0.4s; /* Add transition for smooth color change */
+}
+
+#page3-button:hover h4 a {
+  color: white;
+}
+
+#right-arrow {
+  margin-left: 10px;
+  transition: fill ease 0.4s; /* Add transition for smooth color change */
+}
+
+#page3-button:hover #right-arrow path {
+  fill: white;
+}
+/*  */
+
 @keyframes movingBall {
   from {
     transform: translate(10%, -10%) skew(0);
@@ -372,24 +480,6 @@ nav h3 {
   background-size: cover;
   background-position: center;
 }
-
-/* #page5{
-    width: 100%;
-    height: 50vh;
-    background-color: #EFEAE3;
-    padding: 9vw 2vw;
-}
-
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    width: 30%;
-    border-left: 1px solid #918b8b;
-    padding: 0 2vw;
-  } */
 
 #page6 {
   width: 100%;
@@ -670,56 +760,51 @@ nav h3 {
   }
 }
 
-#loader{
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    transition: all ease 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#loader {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  transition: all ease 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-#loader h1{
-    font-size: 4vw;
-    color: transparent;
-    background: linear-gradient(to right , orange, orangered);
-    -webkit-background-clip: text;
-    position: absolute;
-    opacity: 0;
-    animation-name: loading;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-timing-function: linear;
+#loader h1 {
+  font-size: 4vw;
+  color: transparent;
+  background: linear-gradient(to right, orange, orangered);
+  -webkit-background-clip: text;
+  position: absolute;
+  opacity: 0;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
 }
 
-#loader h1:nth-child(2){
-    animation-delay: 2s;
-    
+#loader h1:nth-child(2) {
+  animation-delay: 2s;
 }
 
-#loader h1:nth-child(3){
-    animation-delay: 3s;
+#loader h1:nth-child(3) {
+  animation-delay: 3s;
 }
 
 @keyframes loading {
-    0%{
-        opacity: 0;
-    }
-    10%{
-        opacity: 1;
-
-    }
-    90%{
-        opacity: 1;
-
-    }
-    100%{
-        opacity: 0;
-
-    }
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
