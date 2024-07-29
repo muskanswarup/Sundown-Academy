@@ -568,7 +568,7 @@ nav h3 {
 #footer {
   position: fixed;
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   background-color: black;
   bottom: 0;
   color: orange;
@@ -577,17 +577,21 @@ nav h3 {
   justify-content: flex-end;
   flex-direction: column;
   padding: 1vw;
+  color: white;
 }
 
 #footer h1 {
   font-size: 22vw;
   margin: 0;
+  z-index: 1000;
+  border-bottom: 1px solid white;
+  /* padding: 1; */
 }
 
 #footer-div {
   height: 20vh;
   width: 100%;
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -601,6 +605,8 @@ nav h3 {
 #footer-left h3 {
   margin: 0.5vw 0;
   font-size: 2vw;
+  z-index: 999;
+  position: relative;
 }
 
 #footer-right {
@@ -608,6 +614,8 @@ nav h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  z-index: 999;
+  position: relative;
 }
 
 #footer-right p {
@@ -626,64 +634,80 @@ nav h3 {
   width: 200px;
   height: 30px;
   padding: 0.5vw;
-  margin-right: 0.5vw;
-  z-index: 10;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
   outline: none;
+  color: white;
   margin-top: 2%;
 }
 
-/* 
-#footer-div {
-  width: 100%;
-  height: 20vh;
-  display: flex;
-  justify-content: space-between;
-  padding: 5vw;
-  font-weight: 200;
-}
-
-#footer-bottom {
-  border-top: 1px solid #dadada;
-  height: 20vh;
-  width: 100%;
+#footer-right input::placeholder {
   color: white;
-  z-index: 100;
 }
 
-#footer-left {
-  margin-top: -3vh;
-  font-size: 1.6vw;
-}
-
-#footer-left h3 a {
-  text-decoration: none;
-  cursor: pointer;
-  color: orange;
-}
-
-#footer-left h3:hover {
-  cursor: pointer;
-}
-
-#footer-div #footer-left h3 {
-  cursor: pointer;
-}
-
-#footer-right input {
-  margin-top: 2vw;
-  width: 20vw;
-  height: 5vh;
-  background-color: white;
-  color: black;
-  font-size: 1vw;
-  padding: 1vw;
-}
-
-#footer-bottom {
+#footer-bottom{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 2vw;
-  font-size: large;
+}
+
+#hero-shape-footer {
+  position: absolute;
+  width: 100%;
+  height: 15vw;
+  top: 0;
+
+}
+
+#hero-1-footer{
+  width: 100%;
+  height: 100%;
+  /* background-color: #de5337; */
+  background: linear-gradient(#fe330a, #df2e0a);
+  filter: blur(30px);
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  /* border-bottom-left-radius: 50%; */
+ 
+}
+
+#hero-2-footer{
+  width: 20vw;
+  height: 20vw;
+  background-color: #fe330a;
+  /* background-color: yellow; */
+  /* border-bottom-left-radius: 10%; */
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 90%;
+  filter: blur(30px);
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+#hero-3-footer{
+  width: 30vw;
+  height: 35vw;
+  background-color:#fe330a;
+  /* background-color: gray; */
+  float: right;
+  border-bottom-left-radius: 80%;
+  border-top-left-radius: 50%;
+  filter: blur(30px);
+  /* position: ; */
+  animation-name: anime1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
 
 #full-scr {
@@ -702,7 +726,7 @@ nav h3 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: #efeae3;
-} */
+} 
 
 /* For smaller screens */
 @media (max-width: 600px) {
