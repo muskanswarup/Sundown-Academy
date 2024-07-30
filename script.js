@@ -24,6 +24,7 @@ function page5Animation() {
   });
 }
 
+// Swiper animation
 function swiperAnimation() {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
@@ -32,25 +33,34 @@ function swiperAnimation() {
   });
 }
 
+// Navigation menu 
 function menuAnimation() {
   var menu = document.querySelector("nav h3");
   var full = document.querySelector("#full-scr");
   var navImg = document.querySelector("nav img");
+  var menuIcon = document.querySelector("#menu-icon");
   var flag = 0;
 
   menu.addEventListener("click", function () {
     if (flag == 0) {
       full.style.top = 0;
       navImg.style.opacity = 0;
+      menuIcon.classList.remove("bars-icon");
+      menuIcon.classList.add("cross-icon");
+      menuIcon.innerHTML = "&times; Menu";
       flag = 1;
     } else {
       full.style.top = "-100%";
       navImg.style.opacity = 1;
+      menuIcon.classList.remove("cross-icon");
+      menuIcon.classList.add("bars-icon");
+      menuIcon.innerHTML = "☰ Menu";
       flag = 0;
     }
   });
 }
 
+// Loader animation at the beginning
 function loaderAnimation() {
   var loader = document.querySelector("#loader");
 
